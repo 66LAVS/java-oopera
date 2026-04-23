@@ -5,4 +5,12 @@ public class Actor extends Person{
         super(name, surname, gender);
         this.height = height;
     }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
 }
