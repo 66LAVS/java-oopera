@@ -9,7 +9,7 @@ public class Main {
         Director director1 = new Director("Джеймс", "Кемерон", Gender.MALE, 1);
 
         Opera opera = new Opera("Какая - то опера", 45, director, "cи ля до");
-        Balet balet = new Balet("лебединое озеро",55,director1, "Рахманинов", "до ре си");
+        Balet balet = new Balet("лебединое озеро", 55, director1, "Рахманинов", "до ре си");
         MusicalShow musicalShow = new MusicalShow("Дискач", 55, director1, "до ре ми");
 
         opera.addNewActor(actor);

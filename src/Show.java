@@ -1,11 +1,10 @@
 import java.util.ArrayList;
 
-public class Show
-{
+public class Show {
     private String title;
     private int duration;
     private Director director;
-    private ArrayList<Actor> listOfActors = new ArrayList<>();;
+    private ArrayList<Actor> listOfActors = new ArrayList<>();
 
     public Show(String title, int duration, Director director) {
         this.title = title;
@@ -45,27 +44,26 @@ public class Show
         this.title = title;
     }
 
-    public void printListOfActotrs(){
+    public void printListOfActotrs() {
         System.out.println("Создав данного концерта");
-        for (Actor actor : listOfActors){
+        for (Actor actor : listOfActors) {
             System.out.println(actor);
         }
     }
 
-    public void addNewActor(Actor actor){
-        if (listOfActors.contains(actor)){
+    public void addNewActor(Actor actor) {
+        if (listOfActors.contains(actor)) {
             System.out.println("Такой актер уже играет в данном спектакле");
-        }
-        else{
+        } else {
             System.out.println("Актер " + actor.getName() + " добавлен в спектакль");
             listOfActors.add(actor);
         }
     }
 
-    public void changeActor(Actor actor, String surname){
+    public void changeActor(Actor actor, String surname) {
         boolean find = false;
-        for (Actor actor1: listOfActors){
-            if (actor1.getSurname().equals(surname)){
+        for (Actor actor1 : listOfActors) {
+            if (actor1.getSurname().equals(surname)) {
                 listOfActors.remove(actor1);
                 listOfActors.add(actor);
                 System.out.println("Новый актер " + actor + " добавлен" + " актер " + surname + " удален.");
@@ -74,7 +72,7 @@ public class Show
             }
 
         }
-        if (!find){
+        if (!find) {
             System.out.println("Актера с фамилией " + surname + " найти не удалось");
         }
     }

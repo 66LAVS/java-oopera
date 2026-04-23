@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Actor extends Person{
+public class Actor extends Person {
     private double height;
 
     public Actor(String name, String surname, Gender gender, double height) {
@@ -17,7 +17,7 @@ public class Actor extends Person{
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "Имя " + getName() + " Фамилия " + getSurname() + " Рост " + getHeight();
     }
 
