@@ -5,13 +5,12 @@ public class Show
     private String title;
     private int duration;
     private Director director;
-    private ArrayList<Actor> listOfActors;
+    private ArrayList<Actor> listOfActors = new ArrayList<>();;
 
-    public Show(String title, int duration, Director director, ArrayList<Actor> listOfActors) {
+    public Show(String title, int duration, Director director) {
         this.title = title;
         this.duration = duration;
         this.director = director;
-        this.listOfActors = listOfActors;
     }
 
     public int getDuration() {
@@ -47,8 +46,9 @@ public class Show
     }
 
     public void printListOfActotrs(){
+        System.out.println("Создав данного концерта");
         for (Actor actor : listOfActors){
-            System.out.println(actor.toString());
+            System.out.println(actor);
         }
     }
 
@@ -57,7 +57,7 @@ public class Show
             System.out.println("Такой актер уже играет в данном спектакле");
         }
         else{
-            System.out.println("Актер добавлен в спектакль");
+            System.out.println("Актер " + actor.getName() + " добавлен в спектакль");
             listOfActors.add(actor);
         }
     }
@@ -68,14 +68,14 @@ public class Show
             if (actor1.getSurname().equals(surname)){
                 listOfActors.remove(actor1);
                 listOfActors.add(actor);
-                System.out.println("Новый актер" + actor.toString() + "добавлен" + "актер" + surname + "удален.");
+                System.out.println("Новый актер " + actor + " добавлен" + " актер " + surname + " удален.");
                 find = true;
                 break;
             }
 
         }
         if (!find){
-            System.out.println("Актера с фамилией" + actor + "найти не удалось");
+            System.out.println("Актера с фамилией " + surname + " найти не удалось");
         }
     }
 

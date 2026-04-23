@@ -12,8 +12,8 @@ public class Opera extends MusicalShow{
     }
 
 
-    public Opera(String title, int duration, Director director, ArrayList<Actor> listOfActors) {
-        super(title, duration, director, listOfActors);
+    public Opera(String title, int duration, Director director, String librettoText ) {
+        super(title, duration, director, librettoText);
     }
 
 }

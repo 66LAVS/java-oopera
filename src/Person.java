@@ -37,7 +37,7 @@ public class Person {
     }
     @Override
     public String toString(){
-        return "Имя" + getName() + "Фамилия" + getSurname();
+        return "Имя " + getName() + " Фамилия " + getSurname();
     }
 
     @Override

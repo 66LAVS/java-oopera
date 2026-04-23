@@ -20,11 +20,12 @@ public class MusicalShow extends Show{
         this.librettoText = librettoText;
     }
 
-    public MusicalShow(String title, int duration, Director director, ArrayList<Actor> listOfActors) {
-        super(title, duration, director, listOfActors);
+    public MusicalShow(String title, int duration, Director director, String librettoText) {
+        super(title, duration, director);
+        this.librettoText = librettoText;
     }
 
-    public void PrintLibrettio(){
+    public void printLibrettio(){
         System.out.println("Текст либретто:");
         System.out.println(getLibrettoText());
     }

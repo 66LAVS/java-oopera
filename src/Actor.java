@@ -18,7 +18,7 @@ public class Actor extends Person{
 
     @Override
     public String toString(){
-        return "Имя" + getName() + "Фамилия" + getSurname() + "Рост" + getHeight();
+        return "Имя " + getName() + " Фамилия " + getSurname() + " Рост " + getHeight();
     }
 
 
