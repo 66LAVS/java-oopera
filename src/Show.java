@@ -6,7 +6,7 @@ public class Show {
     protected int duration;
     protected Director director;
     protected ArrayList<Actor> listOfActors = new ArrayList<>(); //вроде все классы починил
-    private Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
     //спасибо за развернутую обратную связь
 
     public Show(String title, int duration, Director director) {
@@ -68,7 +68,7 @@ public class Show {
         boolean find = false;
         ArrayList<Integer> positions = new ArrayList<>();
 
-        for (int i = 0; i < listOfActors.size(); i++ ) {
+        for (int i = 0; i < listOfActors.size(); i++) {
             if (listOfActors.get(i).getSurname().equals(surname)) {
                 System.out.println((i + 1) + " " + listOfActors.get(i).toString());
                 positions.add(i);
@@ -79,14 +79,13 @@ public class Show {
             System.out.println("Актера с фамилией " + surname + " найти не удалось");
             return;
         }
-        if (positions.size() == 1){
-                listOfActors.remove(listOfActors.getFirst());
-                listOfActors.add(actor);
-                System.out.println("Новый актер " + actor + " добавлен" + " актер " + surname + " удален.");
-        }
-        else {
+        if (positions.size() == 1) {
+            listOfActors.remove(listOfActors.getFirst());
+            listOfActors.add(actor);
+            System.out.println("Новый актер " + actor + " добавлен" + " актер " + surname + " удален.");
+        } else {
             System.out.println("Выберете какого человека хотите удалить");
-            int choise =  scanner.nextInt() - 1;
+            int choise = scanner.nextInt() - 1;
             Actor deletedActor = listOfActors.get(choise);
             listOfActors.remove(deletedActor);
             listOfActors.add(actor);
