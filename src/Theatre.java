@@ -4,6 +4,7 @@ public class Theatre {
         Actor actor = new Actor("Николай", "Цескаридзе", Gender.MALE, 190);
         Actor actor1 = new Actor("Человек", "Паук", Gender.MALE, 155);
         Actor actor2 = new Actor("Бэт", "Герл", Gender.FEMALE, 177);
+        Actor actor4 = new Actor("Николай1", "Цескаридзе", Gender.MALE, 190);
 
         Director director = new Director("Майкл", "Бэй", Gender.MALE, 3);
         Director director1 = new Director("Джеймс", "Кемерон", Gender.MALE, 1);
@@ -16,6 +17,8 @@ public class Theatre {
         opera.addNewActor(actor2);
 
         ballet.addNewActor(actor);
+        ballet.addNewActor(actor4);
+
 
         musicalShow.addNewActor(actor);
         musicalShow.addNewActor(actor1);
@@ -25,8 +28,10 @@ public class Theatre {
         opera.printListOfActotrs();
         musicalShow.printListOfActotrs();
 
+        ballet.printListOfActotrs();
         ballet.changeActor(actor1, "Цескаридзе");
         ballet.printListOfActotrs();
+
 
         ballet.changeActor(actor2, "Кишлак");
 
