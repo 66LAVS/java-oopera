@@ -4,7 +4,8 @@ public class Show {
     protected String title;
     protected int duration;
     protected Director director;
-    protected ArrayList<Actor> listOfActors = new ArrayList<>();
+    protected ArrayList<Actor> listOfActors = new ArrayList<>(); //вроде все классы починил
+    //спасибо за развернутую обратную связь
 
     public Show(String title, int duration, Director director) {
         this.title = title;
